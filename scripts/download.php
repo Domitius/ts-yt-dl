@@ -35,7 +35,7 @@ if (!empty($url) && filter_var($url, FILTER_VALIDATE_URL)) {
 			$status = "Failed to create directory for video!";
 			$thumbnail = './error.png';
 		}
-	} elseif ($dtype == "audio"){
+	} elseif ($dtype == "audio") {
 		//download audio only
 		if ( mkdir("$data_path/$userid/audios/$timestamp", 0755, true) ) {
 			$title = exec("youtube-dl --get-title $url");
@@ -83,7 +83,7 @@ if (!empty($url) && filter_var($url, FILTER_VALIDATE_URL)) {
 			$status = "Failed to create directory for video!";
 			$thumbnail = './error.png';
 		}
-	} elseif ($dtype == "public_audio"){
+	} elseif ($dtype == "public_audio") {
 		//download public audio only
 		if ( mkdir("$public_path/audios/$timestamp", 0755, true) ) {
 			$title = exec("youtube-dl --get-title $url");
